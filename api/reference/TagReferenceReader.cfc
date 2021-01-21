@@ -75,6 +75,15 @@ component accessors=true {
 
 			parsedTag.attributes.append( parsedAttribute );
 		}
+		
+		if (tagname eq "document"){
+			dump(getTagData( "cf", arguments.tagName ));
+			dump(extensionList());
+			dump(coreDefinition);
+			dump(attribs);
+			dump(parsedTag);
+			abort;
+		}
 
 		return parsedTag;
 	}
